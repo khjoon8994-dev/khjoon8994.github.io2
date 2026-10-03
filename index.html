@@ -1,0 +1,111 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><title>일제 강점기 암기 카드 (천재)</title>
+<style>
+:root{--bg:#FAF8F3;--ink:#22262E;--sub:#6B707B;--ln:#DADDE4;--card:#fff;--ok:#1C8651;--okb:#E6F4EC;--no:#C62833;--nob:#FBE9EA;--ac:#B4541F;box-sizing:border-box;padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}
+@media(prefers-color-scheme:dark){:root{--bg:#15171B;--ink:#E6E8EC;--sub:#9AA0AB;--ln:#30343C;--card:#1C1F25;--ok:#4FCB8B;--okb:#183326;--no:#FF6B72;--nob:#3A1C1F;--ac:#F0A070}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 "Apple SD Gothic Neo","Malgun Gothic",sans-serif;word-break:keep-all}
+button,input{font:inherit;color:inherit}button{cursor:pointer}
+.w{max-width:600px;margin:0 auto;padding:18px 16px 48px}
+h1{font-size:21px;margin:0}h1+p{margin:2px 0 14px;color:var(--sub);font-size:13px}
+.tabs{display:flex;gap:6px;margin-bottom:14px}.tabs button{flex:1;padding:9px;border:1px solid var(--ln);border-radius:9px;background:none}.tabs .on{background:var(--ink);color:var(--bg);border-color:var(--ink);font-weight:700}
+.box{background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:16px;margin-bottom:12px}
+.big{font-size:32px;font-weight:700;line-height:1.1}.m{color:var(--sub);font-size:13px}
+.btn{width:100%;padding:13px;border:0;border-radius:10px;background:var(--ac);color:#fff;font-weight:700;margin-top:10px}.btn.g{background:none;border:1px solid var(--ln);color:var(--ink);font-weight:400}.btn.s{width:auto;padding:6px 12px;margin:0;font-size:13px}
+.bar{height:8px;background:var(--ln);border-radius:4px;overflow:hidden;margin:8px 0}.bar i{display:block;height:100%;background:var(--ok)}
+.u{font-weight:700;margin:18px 0 6px}.r{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--ln)}.r b{font-weight:400}
+.q{font-size:19px;margin:6px 0 14px}.ans{font-size:24px;font-weight:700;color:var(--ac);margin-bottom:6px}
+.opt{display:block;width:100%;text-align:left;padding:12px 14px;margin-bottom:8px;border:1px solid var(--ln);border-radius:10px;background:var(--bg)}.opt.ok{background:var(--okb);border-color:var(--ok)}.opt.no{background:var(--nob);border-color:var(--no)}
+input{width:100%;padding:12px 14px;font-size:17px;border:1px solid var(--ln);border-radius:10px;background:var(--bg)}
+.fb{padding:12px 14px;border-radius:10px;margin-top:8px}.fb.ok{background:var(--okb)}.fb.no{background:var(--nob)}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+</style></head><body><div class="w"><h1>일제 강점기 암기 카드</h1><p>천재교육 한국사2 · Ⅰ 일제 식민 통치와 민족 운동</p><div id="app"></div></div>
+<script>
+const U=["제국주의 질서와 일제의 식민 통치 정책","일제의 수탈 정책과 한국인의 삶","다양한 민족 운동의 전개","사회·문화의 변화와 대중 운동","광복을 위한 노력"];
+// [소단원 제목, 시작 쪽, 중단원 번호(0~4)] — 천재 교과서 차례 기준
+const L=[["제국주의 시대와 일제의 무단 통치",10,0],["일제의 '문화 정치'",13,0],["민족 말살 정책과 전시 동원 체제",16,0],
+["식민지 경제 체제의 구축",20,1],["수탈과 개발의 식민지 경제",23,1],["전시 통제 경제와 수탈의 강화",26,1],
+["1910년대 민족 운동과 3·1 운동",30,2],["대한민국 임시 정부의 수립과 활동",34,2],["무장 투쟁과 의열 투쟁",37,2],["민족 운동의 분화",41,2],["신간회와 학생 운동",44,2],
+["도시와 농촌의 변화",48,3],["일상의 변화와 대중문화",51,3],["민족 문화 수호 운동",54,3],["다양한 분야의 대중 운동",58,3],
+["한중 연대와 민족 운동 세력의 결집",63,4],["건국 준비 활동과 연합국의 한국 독립 확인",66,4]];
+// [소단원 번호, 질문, 답]
+const C=[[0,"헌병이 경찰 업무를 맡은 1910년대 일제의 통치 방식은?","무단 통치"],[0,"입법·행정·사법·군사권을 쥔 식민 통치 최고 기구는?","조선 총독부"],
+[1,"3·1 운동 이후 일제가 내세운 통치 방식은?","문화 정치"],[1,"1925년 독립운동가와 사회주의자를 탄압하려 제정한 법은?","치안 유지법"],
+[2,"한국인을 일왕의 백성으로 만들려 한 정책은?","황국 신민화 정책"],[2,"일왕에 대한 충성을 맹세하게 한 글은?","황국 신민 서사"],
+[3,"1910~1918년 토지 소유자의 신고를 받아 실시한 사업은?","토지 조사 사업"],[3,"회사를 세울 때 총독의 허가를 받게 한 1910년 법령은?","회사령"],
+[4,"일본의 쌀 부족을 메우려 1920년부터 추진한 계획은?","산미 증식 계획"],[4,"1920년 회사령이 폐지되며 회사 설립은 무엇으로 바뀌었나?","신고제"],
+[5,"1938년 인적·물적 자원을 통제하려 제정한 법은?","국가 총동원법"],[5,"쌀·놋그릇 등을 강제로 거둬 간 수탈 방식은?","공출"],
+[6,"1919년 도쿄 유학생들이 발표한 선언은?","2·8 독립 선언"],[6,"1919년 3월 1일 전국에서 일어난 만세 시위는?","3·1 운동"],
+[7,"대한민국 임시 정부의 초대 대통령은?","이승만"],[7,"임시 정부가 국내와 연락하려 둔 비밀 행정 조직은?","연통제"],
+[8,"1920년 김좌진의 북로 군정서 등이 승리한 전투는?","청산리 대첩"],[8,"김원봉이 만주 지린에서 조직한 의열 투쟁 단체는?","의열단"],
+[9,"신채호가 쓴 의열단의 활동 지침은?","조선 혁명 선언"],[9,"이광수 등이 식민 지배를 인정하며 참정권을 얻으려 한 운동은?","자치 운동"],
+[10,"1927년 민족주의와 사회주의 진영이 함께 만든 단체는?","신간회"],[10,"1929년 나주역 한·일 학생 충돌로 시작된 운동은?","광주 학생 항일 운동"],
+[11,"도시 빈민이 움막을 짓고 모여 산 마을은?","토막촌"],[11,"1923년 지진 뒤 유언비어로 한국인이 학살된 사건은?","관동 대지진"],
+[12,"흑백 무성 영화에서 장면을 해설한 사람은?","변사"],[12,"나운규가 각본·주연·감독을 맡은 영화는?","아리랑"],
+[13,"'조선 국혼'을 강조하며 『한국통사』를 쓴 역사가는?","박은식"],[13,"한글 맞춤법 통일안을 만들고 큰사전 편찬을 추진한 단체는?","조선어 학회"],
+[14,"백정 차별 철폐를 내걸고 1923년 진주에서 만든 단체는?","조선 형평사"],[14,"어린이날 제정에 앞장선 소년 운동가는?","방정환"],
+[15,"1938년 우한에서 창설된 중국 관내 최초의 한인 부대는?","조선 의용대"],[15,"1940년 충칭에서 창설된 임시 정부의 군대는?","한국광복군"],
+[16,"한국의 독립을 처음 약속한 1943년 연합국 선언은?","카이로 선언"],[16,"1944년 여운형이 국내에서 조직한 비밀 결사는?","조선 건국 동맹"]
+].map((c,i)=>({id:"c"+i,l:c[0],q:c[1],a:c[2]}));
+
+const KEY="ilje-chunjae-v1",EXAM="2026-10-12";
+let S;try{S=JSON.parse(localStorage.getItem(KEY))}catch(e){}S=S||{exam:EXAM,c:{}};
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+const $=document.getElementById("app");let view="today",ses=null;
+const pad=n=>String(n).padStart(2,"0"),fmt=d=>d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
+const td=()=>fmt(new Date()),add=n=>{const d=new Date();d.setDate(d.getDate()+n);return fmt(d)};
+const dl=()=>Math.round((new Date(S.exam+"T12:00")-new Date(td()+"T12:00"))/864e5);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const norm=s=>String(s).toLowerCase().replace(/[\s·.,'"‘’“”()]/g,"");
+const shuf=a=>{a=a.slice();for(let i=a.length;i>1;){const j=Math.floor(Math.random()*i--);[a[i],a[j]]=[a[j],a[i]]}return a};
+const unseen=()=>C.filter(c=>!S.c[c.id]);
+const due=()=>C.filter(c=>{const s=S.c[c.id];return s&&s.l<3&&s.d<=td()});
+function day(){if(!S.day||S.day.d!==td())S.day={d:td(),n:0,q:Math.ceil(unseen().length/Math.max(1,dl()-1))};return S.day}
+const newLeft=()=>Math.min(Math.max(0,day().q-day().n),unseen().length);
+function opts(c){const same=C.filter(x=>x.id!==c.id&&norm(x.a)!==norm(c.a));
+  const pool=shuf(same.filter(x=>L[x.l][2]===L[c.l][2]).concat(shuf(same)));const seen=new Set([norm(c.a)]),d=[];
+  for(const x of pool){if(d.length<3&&!seen.has(norm(x.a))){seen.add(norm(x.a));d.push(x.a)}}return shuf([c.a].concat(d))}
+const mode=c=>{const s=S.c[c.id];return !s?"learn":s.l===0?"mc":"write"};
+function begin(list){if(!list.length)return;ses={q:list.map(c=>({c,m:mode(c)})),i:0,ok:0,n:0,fb:null,done:false};render()}
+
+function commit(ok){const it=ses.q[ses.i],id=it.c.id;let s=S.c[id];
+  if(!s){s=S.c[id]={l:0,d:td(),w:0};day().n++}
+  ses.n++;if(ok)ses.ok++;
+  if(ok){if(it.m==="mc"){s.l=Math.max(s.l,1);s.d=add(1)}else{s.l++;s.d=s.l>=3?null:add([0,1,2,4][s.l])}}
+  else{s.w++;s.l=0;s.d=td();ses.q.push({c:it.c,m:"mc"})}
+  save()}
+
+function tabs(){return `<div class="tabs"><button class="${view==="today"?"on":""}" data-a="tab" data-v="today">오늘</button><button class="${view==="units"?"on":""}" data-a="tab" data-v="units">소단원</button></div>`}
+function todayH(){const d=due().length,n=newLeft(),m=C.filter(c=>(S.c[c.id]||{}).l>=3).length,x=dl();
+  return `<div class="box"><div class="m">시험까지</div><div class="big">${x>0?"D-"+x:x===0?"D-DAY":"시험 끝"}</div>
+  <label class="m">시험일 <input type="date" id="ex" value="${S.exam}" style="width:auto;font-size:14px;padding:4px 8px"></label></div>
+  <div class="box"><b>오늘의 카드</b><p class="m" style="margin:4px 0 0">복습 ${d}장 · 새 카드 ${n}장</p>
+  <button class="btn" data-a="start" ${d+n?"":"disabled"}>${d+n?"학습 시작":"오늘 분량 끝!"}</button></div>
+  <div class="box"><b>전체 진행</b><div class="bar"><i style="width:${m/C.length*100}%"></i></div><span class="m">외운 카드 ${m} / ${C.length}장 · 안 본 카드 ${unseen().length}장</span></div>
+  <p class="m">새 카드는 답을 보고 외운 뒤 객관식으로 확인하고, 이후 1·2·4일 간격으로 주관식 복습이 나와요. 3번 맞히면 '외움'이에요.</p>`}
+function unitsH(){let h="";U.forEach((t,u)=>{h+=`<div class="u">${t}</div>`;let k=0;
+  L.forEach((l,i)=>{if(l[2]!==u)return;k++;const cs=C.filter(c=>c.l===i),m=cs.filter(c=>(S.c[c.id]||{}).l>=3).length;
+  h+=`<div class="r"><div><b>${u+1}-${k} ${esc(l[0])}</b><div class="m">${l[1]}쪽~ · 외움 ${m}/${cs.length}</div></div><button class="btn s" data-a="les" data-v="${i}">연습</button></div>`})});
+  return `<div class="box" style="padding-top:2px">${h}</div>`}
+function studyH(){const it=ses.q[ses.i],c=it.c,fb=ses.fb,tot=ses.q.length;let b="";
+  if(it.m==="learn")b=`<div class="ans">${esc(c.a)}</div><button class="btn" data-a="learned">외웠어요, 문제로 확인</button>`;
+  else if(it.m==="mc"){it.o=it.o||opts(c);b=it.o.map((o,i)=>`<button class="opt ${fb?(o===c.a?"ok":i===fb.p?"no":""):""}" data-a="pick" data-v="${i}" ${fb?"disabled":""}>${esc(o)}</button>`).join("")}
+  else b=`<form id="wf" autocomplete="off"><input id="wi" aria-label="답" placeholder="답을 입력하세요" value="${fb?esc(fb.v):""}" ${fb?"disabled":""}>${fb?"":`<button class="btn" type="submit">확인</button><button class="btn g" type="button" data-a="giveup">모르겠어요</button>`}</form>`;
+  if(fb)b+=`<div class="fb ${fb.ok?"ok":"no"}">${fb.ok?"정답!":"아쉬워요"} · 정답: <b>${esc(c.a)}</b></div><button class="btn" data-a="next" id="nx">다음</button>`;
+  return `<div class="top"><button class="btn g s" data-a="quit">그만하기</button><span class="m">${ses.i+1} / ${tot}</span></div><div class="box"><div class="m">${esc(L[c.l][0])} · ${L[c.l][1]}쪽~</div><p class="q">${esc(c.q)}</p>${b}</div>`}
+function doneH(){return `<div class="box" style="text-align:center"><div class="m">학습 끝</div><div class="big">${ses.ok} / ${ses.n}</div><div class="m">정답률 ${ses.n?Math.round(ses.ok/ses.n*100):0}%</div><button class="btn" data-a="quit">처음으로</button></div>`}
+function render(){$.innerHTML=ses?(ses.done?doneH():studyH()):tabs()+(view==="today"?todayH():unitsH());
+  if(ses&&!ses.done){const w=document.getElementById("wi");if(w&&!ses.fb)w.focus();const n=document.getElementById("nx");if(n)n.focus({preventScroll:true})}}
+$.addEventListener("click",e=>{const b=e.target.closest("[data-a]");if(!b||b.disabled)return;const a=b.dataset.a,v=b.dataset.v,it=ses&&!ses.done?ses.q[ses.i]:null;
+  if(a==="tab"){view=v;render()}
+  else if(a==="start")begin(shuf(due()).concat(unseen().slice(0,newLeft())));
+  else if(a==="les")begin(C.filter(c=>c.l===+v));
+  else if(a==="learned"){it.m="mc";render()}
+  else if(a==="pick"&&!ses.fb){const ok=it.o[+v]===it.c.a;commit(ok);ses.fb={ok,p:+v};render()}
+  else if(a==="giveup"&&!ses.fb){commit(false);ses.fb={ok:false,v:""};render()}
+  else if(a==="next"){ses.fb=null;ses.i++;if(ses.i>=ses.q.length)ses.done=true;render()}
+  else if(a==="quit"){ses=null;render()}});
+$.addEventListener("submit",e=>{if(e.target.id!=="wf")return;e.preventDefault();if(!ses||ses.fb)return;
+  const v=document.getElementById("wi").value.trim();if(!v)return;const ok=norm(v)===norm(ses.q[ses.i].c.a);commit(ok);ses.fb={ok,v};render()});
+$.addEventListener("change",e=>{if(e.target.id==="ex"&&e.target.value){S.exam=e.target.value;S.day=null;save();render()}});
+render();
+</script></body></html>
